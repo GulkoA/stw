@@ -147,6 +147,7 @@ class Stopwatch:
   
   # representations
   
+  
   def __str__(self) -> str:
     """
     Get a string representation of the stopwatch.
