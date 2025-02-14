@@ -19,6 +19,7 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
     'sphinx.ext.intersphinx',
+    'sphinx.ext.autosummary',
     'myst_parser'
 ]
 
@@ -33,6 +34,10 @@ html_static_path = ['_static']
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3', None),
 }
+
+# Autosummary settings
+autosummary_generate = True
+add_module_names = False
 
 # Napoleon settings
 napoleon_google_docstring = True

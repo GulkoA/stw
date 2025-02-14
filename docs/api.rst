@@ -3,37 +3,24 @@
 API Reference
 ============
 
-Stopwatch Class
---------------
+.. currentmodule:: stw
 
-.. autoclass:: stw.Stopwatch
+.. autosummary::
+   :toctree: _autosummary
+   :template: custom-module-template.rst
+   :recursive:
+   
+   stw.Stopwatch
+
+Class Documentation
+-----------------
+
+.. autoclass:: Stopwatch
    :members:
+   :undoc-members:
    :special-members: __init__, __enter__, __exit__
    :show-inheritance:
-
-Core Methods
-~~~~~~~~~~~
-
-.. automethod:: stw.Stopwatch.start
-
-.. automethod:: stw.Stopwatch.stop
-
-.. automethod:: stw.Stopwatch.lap
-
-.. automethod:: stw.Stopwatch.get_lap
-
-.. automethod:: stw.Stopwatch.elapsed_time
-
-.. automethod:: stw.Stopwatch.elapsed_since_lap
-
-.. automethod:: stw.Stopwatch.time_function
-
-Properties
-~~~~~~~~~
-
-.. autoproperty:: stw.Stopwatch.is_running
-
-.. autoproperty:: stw.Stopwatch.laps
+   :member-order: bysource
 
 Error Handling
 -------------
