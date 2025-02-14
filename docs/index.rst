@@ -1,5 +1,5 @@
-STW Documentation
-================
+Welcome to STW Documentation
+===========================
 
 .. toctree::
    :maxdepth: 2
@@ -7,12 +7,18 @@ STW Documentation
 
    readme
    api
+   examples
 
-Overview
---------
+About STW
+---------
 
 STW (Stopwatch) is a lightweight Python stopwatch library for timing code execution with precision.
-It provides features for lap timing, function execution timing, and context manager support.
+It provides a simple yet powerful interface for:
+
+* Basic timing operations
+* Lap timing with named laps
+* Function execution timing
+* Context manager support
 
 Quick Start
 ----------
@@ -24,19 +30,25 @@ Installation
 
    pip install stw
 
-Basic Usage
-~~~~~~~~~~
+Basic Example
+~~~~~~~~~~~~
 
 .. code-block:: python
 
    from stw import Stopwatch
 
-   # Simple timing
+   # Using context manager
    with Stopwatch() as sw:
        # Your code here
-       elapsed = sw.elapsed_time()
+       print(f"Operation took {sw.elapsed_time():.2f} seconds")
 
-See the full documentation for more examples and detailed API reference.
+   # Using lap timing
+   sw = Stopwatch(start=True)
+   sw.lap("operation1")
+   sw.lap("operation2")
+   print(sw.elapsed_since_lap("operation1"))
+
+See the :ref:`examples` section for more usage examples and the :ref:`api` section for detailed API documentation.
 
 Indices and tables
 ==================
