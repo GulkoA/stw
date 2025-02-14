@@ -1,4 +1,4 @@
-# stwatch
+# stw ⏱️
 
 A lightweight Python stopwatch library for timing code execution with precision. Features include lap timing, function execution timing, and context manager support.
 
@@ -15,7 +15,7 @@ A lightweight Python stopwatch library for timing code execution with precision.
 ## Installation
 
 ```bash
-pip install stwatch
+pip install stw
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ pip install stwatch
 ### Basic Timing
 
 ```python
-from stwatch import Stopwatch
+from stw import Stopwatch
 
 # Simple start/stop
 sw = Stopwatch()
@@ -73,7 +73,7 @@ time_since_db = sw.elapsed_since_lap("database_query")
 ### Function Timing
 
 ```python
-from stwatch import Stopwatch
+from stw import Stopwatch
 
 def expensive_operation(x, y, multiplier=1):
     # ... some time-consuming code ...

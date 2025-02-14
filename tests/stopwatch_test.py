@@ -1,6 +1,6 @@
 import pytest
 import time
-from src.stwatch import Stopwatch
+from src.stw import Stopwatch
 
 @pytest.fixture
 def stopwatch():
