@@ -6,10 +6,14 @@ copyright = '2024'
 author = 'Alex Gulko'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.0'
-version = '0.1.0'
+release = '0.1.2'
+version = '0.1.2'
 
 # -- General configuration ---------------------------------------------------
+import os
+import sys
+sys.path.insert(0, os.path.abspath('..'))
+
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
