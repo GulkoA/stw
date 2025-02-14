@@ -20,4 +20,5 @@ license-files = ["LICEN[CS]E*"]
 
 [project.urls]
 Homepage = "https://github.com/GulkoA/stw"
+Documentation = "https://gulkoa.github.io/stw"
 Issues = "https://github.com/GulkoA/stw/issues"

@@ -2,6 +2,10 @@
 
 A lightweight Python stopwatch library for timing code execution with precision. Features include lap timing, function execution timing, and context manager support.
 
+Docs can be found [here](https://stw.readthedocs.io/en/latest/).
+
+[![PyPI version](https://badge.fury.io/py/stw.svg)](https://badge.fury.io/py/stw)
+
 ## Features
 
 - Simple start/stop timing
