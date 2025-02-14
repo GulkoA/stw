@@ -3,19 +3,9 @@
 API Reference
 ============
 
-.. currentmodule:: stw
+.. currentmodule:: stw.stopwatch
 
-.. autosummary::
-   :toctree: _autosummary
-   :template: custom-module-template.rst
-   :recursive:
-   
-   stw.Stopwatch
-
-Class Documentation
------------------
-
-.. autoclass:: Stopwatch
+.. automodule:: stw.stopwatch
    :members:
    :undoc-members:
    :special-members: __init__, __enter__, __exit__
