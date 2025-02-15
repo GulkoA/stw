@@ -5,12 +5,14 @@ class Stopwatch:
   A simple stopwatch class that can be used to time code execution.
   """
 
-  def __init__(self, start=False):
+  def __init__(self, start=False, verbose=False):
     """
     Initialize the stopwatch.
 
     Args:
       `start`: Whether to start the stopwatch immediately upon initialization.
+
+      `verbose`: Whether to automatically print output for every function call.
     """
     self._start_time = None
     self._end_time = None
@@ -18,8 +20,11 @@ class Stopwatch:
     self._last_lap_time = None
     self._is_running = False
 
+    self._verbose = verbose
+    
     if start:
       self.start()
+
 
   @property
   def is_running(self) -> bool:
@@ -38,18 +43,22 @@ class Stopwatch:
     self._is_running = True
     self._end_time = None
 
+    if self._verbose:
+      print("Stopwatch started")
+
   def lap(self, name: str=None) -> tuple[float, float]:
     """
     Record a lap in the stopwatch.
+
+    if initialized with `verbose=True`, prints the lap time and total time since the stopwatch was started.
 
     Args:
       `name`: The name of the lap. If not provided, the name will be "lap n" where n is the lap number.
 
     Returns:
-      `lap_time`: The time it took to complete the lap.
-
-      `total_time`: The total time since the stopwatch was started
+      `lap_time,total_time`: The time it took to complete the lap, and total time since the stopwatch was started
     """
+
     if not self.is_running:
       raise RuntimeError("Stopwatch is not running, cannot record a lap")
     if name is None:
@@ -62,6 +71,10 @@ class Stopwatch:
     self._laps.append((name, lap_time, total_time))
 
     self._last_lap_time = cur_time
+
+    if self._verbose:
+      print(f"{name} at {total_time} seconds, lap time: {lap_time} seconds")
+
     return lap_time, total_time
 
   def get_lap(self, index: int=None, name: str=None) -> tuple[float, float]:
@@ -76,9 +89,7 @@ class Stopwatch:
       `name`: The name of the lap to get.
 
     Returns:
-      `lap_time`: The time it took to complete the lap
-
-      `total_time`: The total time since the stopwatch was started.
+      `lap_time,total_time`: The time it took to complete the lap and the total time since the stopwatch was started.
     """
     if index is not None and name is not None:
       raise ValueError("Only one of index or name can be provided")
@@ -109,7 +120,13 @@ class Stopwatch:
       raise RuntimeError("Stopwatch is not running, cannot stop")
     self._end_time = time.time()
     self._is_running = False
-    return self._end_time - self._start_time
+
+    elapsed_time = self._end_time - self._start_time
+
+    if self._verbose:
+      print(f"Stopwatch stopped at {elapsed_time} seconds")
+
+    return elapsed_time
   
   def elapsed_time(self) -> float:
     """

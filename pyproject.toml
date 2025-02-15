@@ -4,11 +4,11 @@ build-backend = "hatchling.build"
 
 [project]
 name = "stw"
-version = "0.2.0"
+version = "0.2.2"
 authors = [
   { name="Alex Gulko", email="alex@gulko.net" },
 ]
-description = "Stopwatch for code execution"
+description = "Stopwatch library"
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
@@ -20,5 +20,5 @@ license-files = ["LICEN[CS]E*"]
 
 [project.urls]
 Homepage = "https://github.com/GulkoA/stw"
-Documentation = "https://gulkoa.github.io/stw"
+Documentation = "https://stw.readthedocs.io/en/latest"
 Issues = "https://github.com/GulkoA/stw/issues"
