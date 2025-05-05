@@ -3,9 +3,18 @@
 API Reference
 ============
 
-.. currentmodule:: stw.stopwatch
+.. currentmodule:: stw
 
-.. automodule:: stw.stopwatch
+Top Level Functions
+-----------------
+
+.. autofunction:: stw.stopwatch.human_readable
+.. autofunction:: stw.stopwatch.stopwatch
+
+Stopwatch Class
+-------------
+
+.. autoclass:: stw.stopwatch.Stopwatch
    :members:
    :undoc-members:
    :special-members: __init__, __enter__, __exit__
@@ -17,5 +26,4 @@ Error Handling
 
 The Stopwatch class raises the following exceptions:
 
-* ``RuntimeError``: When performing operations on an unstarted stopwatch
 * ``ValueError``: When accessing invalid laps or providing invalid arguments
